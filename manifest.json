@@ -1,0 +1,36 @@
+{
+    "name": "OKCoin Trading Extension",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Chrome Extension for okcoin.",
+    // "browser_action": {
+    //     "default_icon": "icon.ico"
+    // },
+    // "background": {
+    //     "scripts": [
+    //         "background.js"
+    //     ]
+    // },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.okcoin.com/*",
+                "https://www.okcoin.cn/*"
+            ],
+            "css": [
+                // "lib/bootstrap.min.css",
+                "styles.css"
+            ],
+            "js": [
+                "lib/jquery.min.js",
+                "main.js",
+                "websocket.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "https://www.okcoin.com/",
+        "https://www.okcoin.cn/"
+    ]
+}
