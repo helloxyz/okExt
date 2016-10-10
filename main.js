@@ -113,9 +113,7 @@ function applyPriceMode() {
 
 function setTicket() {
     var futureTradePrice = $('#futureTradePrice')
-    if (ticket_price_mode === 'normal') {
-        futureTradePrice.val('')
-    } else if (ticket_price_mode === 'chase') {
+    if (ticket_price_mode === 'chase') {
         if (ticket_type_mode === 'buy') {
             futureTradePrice.val((ticket_data.sell + 0.02).toFixed(2))
         } else {
